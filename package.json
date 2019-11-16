@@ -1,0 +1,102 @@
+{
+  "name": "chi-wc",
+  "license": "MIT",
+  "version": "0.1.0",
+  "author": "Manuel Martin <manuel.martin@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manolakis/chi-wc.git"
+  },
+  "homepage": "https://github.com/manolakis/chi-wc",
+  "bugs": {
+    "url": "https://github.com/manolakis/chi-wc/issues"
+  },
+  "scripts": {
+    "debug": "web-test-runner \"packages/**/*.test.js\" --watch",
+    "dev-server": "web-dev-server",
+    "format": "npm run format:eslint && npm run format:prettier",
+    "format:eslint": "eslint --ext .js,.html . --fix",
+    "format:prettier": "prettier \"**/*.{js,md}\" --write",
+    "lint": "run-p lint:*",
+    "lint:eclint": "git ls-files | xargs eclint check",
+    "lint:eslint": "eslint --ext .js,.html .",
+    "lint:markdownlint": "git ls-files '*.md' | xargs markdownlint --ignore '{.changeset/*.md,**/CHANGELOG.md}'",
+    "lint:prettier": "prettier \"**/*.js\" --list-different || (echo '↑↑ these files are not prettier formatted ↑↑' && exit 1)",
+    "release": "changeset publish",
+    "start": "npm run storybook",
+    "storybook": "start-storybook -p 9001",
+    "storybook:build": "build-storybook",
+    "storybook:build:start": "web-dev-server --root-dir storybook-static --open",
+    "test": "run-p test:browser",
+    "test:browser": "web-test-runner \"packages/**/*.test.js\" --coverage",
+    "test:browser:all": "web-test-runner \"packages/**/*.test.js\" --playwright --browsers webkit chromium firefox --coverage",
+    "test:browser:watch": "web-test-runner \"packages/**/*.test.js\" --watch"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.10.2",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@mdjs/core": "^0.4.0",
+    "@open-wc/demoing-storybook": "^2.0.2",
+    "@open-wc/eslint-config": "^1.3.0",
+    "@open-wc/testing": "^2.3.9",
+    "@open-wc/testing-helpers": "^1.8.9",
+    "@storybook/addon-a11y": "^5.2.6",
+    "@web/dev-server": "^0.0.10",
+    "@web/test-runner": "^0.7.24",
+    "@web/test-runner-playwright": "^0.5.6",
+    "@webcomponents/webcomponentsjs": "^2.4.0",
+    "babel-eslint": "^10.0.3",
+    "babel-polyfill": "^6.26.0",
+    "eclint": "^2.8.1",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-wc": "^1.2.0",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.3",
+    "markdownlint-cli": "^0.19.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.1",
+    "prettier-package-json": "^2.1.3",
+    "sinon": "^7.5.0",
+    "webpack-merge": "^4.2.2",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "keywords": [
+    "ux-chi",
+    "chi",
+    "web",
+    "components",
+    "webcomponents"
+  ],
+  "files": [
+    "*.js",
+    "*.md",
+    "assets",
+    "packages",
+    "!**/test/*"
+  ],
+  "lint-staged": {
+    "*": [
+      "eclint fix",
+      "git add"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.md": [
+      "prettier --write",
+      "markdownlint --ignore '**/CHANGELOG.md' --ignore '__snapshots__/**/*.md",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "arrowParens": "avoid",
+    "trailingComma": "all"
+  }
+}

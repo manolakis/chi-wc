@@ -98,5 +98,8 @@
     "singleQuote": true,
     "arrowParens": "avoid",
     "trailingComma": "all"
+  },
+  "dependencies": {
+    "@lion/core": "^0.12.0"
   }
 }

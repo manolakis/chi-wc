@@ -1408,7 +1408,7 @@
   dependencies:
     vary "^1.1.2"
 
-"@lion/core@^0.12.0":
+"@lion/core@0.12.0", "@lion/core@^0.12.0":
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/@lion/core/-/core-0.12.0.tgz#b2ceb84fb38470a7c4171324726c8b14bf6ffe0c"
   integrity sha512-Pa+Xnr+nrD8BLdZqJXcNCkYn4KO76K3SFd6kKz6SzCKXfpHCd9pm1kMCGoAJBs2d5bMONgn8zkqFiVPHmLw/fQ==
@@ -1417,6 +1417,13 @@
     "@open-wc/scoped-elements" "^1.2.2"
     lit-element "~2.4.0"
     lit-html "^1.3.0"
+
+"@lion/helpers@^0.5.8":
+  version "0.5.8"
+  resolved "https://registry.yarnpkg.com/@lion/helpers/-/helpers-0.5.8.tgz#d1343827c0672ddc0953937b41450b74dc8f3c92"
+  integrity sha512-5BgBZrixm9J8lekI60AEER3VPZ0qbwSI/Otv2fOy2D8jZF/uW2/rud6xY5eAhaVLOTS1ULZ2dEZACKDJ1leZcw==
+  dependencies:
+    "@lion/core" "0.12.0"
 
 "@manypkg/find-root@^1.1.0":
   version "1.1.0"

@@ -987,6 +987,16 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@bundled-es-modules/axios@0.18.1":
+  version "0.18.1"
+  resolved "https://registry.yarnpkg.com/@bundled-es-modules/axios/-/axios-0.18.1.tgz#8beedbc92e9b0ed7df7c6cbdc6dfce84d306d80b"
+  integrity sha512-7c389uGe0dmfdedi9PQ3Om4vKg1HFzm/IntaqZ4FbXOo+gNiiPIM4He8MIkuRpgqUitbm1km0jOQ8p+tSpUp4Q==
+
+"@bundled-es-modules/message-format@6.0.4":
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/@bundled-es-modules/message-format/-/message-format-6.0.4.tgz#232da6877adb960f6c8f598c72588a84352de147"
+  integrity sha512-NGUoPxqsBzDwvRhY3A3L/AhS1hzS9OWappfyDOyCwE7G3W4ua28gau7QwvJz7QzA6ArbAdeb8c1mLjvd1WUFAA==
+
 "@changesets/apply-release-plan@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@changesets/apply-release-plan/-/apply-release-plan-4.0.0.tgz#e78efb56a4e459a8dab814ba43045f2ace0f27c9"
@@ -1408,6 +1418,15 @@
   dependencies:
     vary "^1.1.2"
 
+"@lion/ajax@^0.5.4":
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/@lion/ajax/-/ajax-0.5.4.tgz#54cb1fb54d2a8283764c7e269d99046e7695e5f5"
+  integrity sha512-MrHqinJrsukbmoqkANQxRD/Tu8Z92Sl6d2hRt7/A6oJC4MemXwpnX6U0fONXrAqmC0z/kwfGAQMdQzXaHIahYA==
+  dependencies:
+    "@bundled-es-modules/axios" "0.18.1"
+    "@lion/core" "0.12.0"
+    singleton-manager "1.1.2"
+
 "@lion/core@0.12.0", "@lion/core@^0.12.0":
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/@lion/core/-/core-0.12.0.tgz#b2ceb84fb38470a7c4171324726c8b14bf6ffe0c"
@@ -1418,12 +1437,55 @@
     lit-element "~2.4.0"
     lit-html "^1.3.0"
 
+"@lion/form-core@0.6.1", "@lion/form-core@^0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@lion/form-core/-/form-core-0.6.1.tgz#79f4647087be5a0f59547c16591023b5462062e5"
+  integrity sha512-4FYuuGyfGwwKtwGrbnzbdm2e4mn1yKB5dFgLD8g9d3w7l5yQK/zYLVUloxd+rFSh7iuSsmCuxr+v6yX5/ids1w==
+  dependencies:
+    "@lion/core" "0.12.0"
+    "@lion/localize" "0.14.4"
+
 "@lion/helpers@^0.5.8":
   version "0.5.8"
   resolved "https://registry.yarnpkg.com/@lion/helpers/-/helpers-0.5.8.tgz#d1343827c0672ddc0953937b41450b74dc8f3c92"
   integrity sha512-5BgBZrixm9J8lekI60AEER3VPZ0qbwSI/Otv2fOy2D8jZF/uW2/rud6xY5eAhaVLOTS1ULZ2dEZACKDJ1leZcw==
   dependencies:
     "@lion/core" "0.12.0"
+
+"@lion/icon@^0.7.4":
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/@lion/icon/-/icon-0.7.4.tgz#eabad66b070c2c7f8d06707548aba7787fb88729"
+  integrity sha512-6PfF+Z8xxiz34dSD735whJraDebRcjZ+aFh7F4aQuuUieKb6Uy+iHH+A0pPDCdUPafudew/IRNUawVhjNYW+0g==
+  dependencies:
+    "@lion/core" "0.12.0"
+    singleton-manager "1.1.2"
+
+"@lion/localize@0.14.4", "@lion/localize@^0.14.4":
+  version "0.14.4"
+  resolved "https://registry.yarnpkg.com/@lion/localize/-/localize-0.14.4.tgz#3ecfc0fff82cf373a5a4e37df3f8d88c75bf96f0"
+  integrity sha512-2o9VAOkorF5sRBPpHkQYjSsh1owS6jtK0BZ0rcOXVBZR/jpYVm9wb71fA9EYfXYBxPOPvHG+Xwj0p0mjV68jkg==
+  dependencies:
+    "@bundled-es-modules/message-format" "6.0.4"
+    "@lion/core" "0.12.0"
+    singleton-manager "1.1.2"
+
+"@lion/overlays@^0.19.0":
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/@lion/overlays/-/overlays-0.19.0.tgz#649a000d7a9da4f399fc1968d1cdf75a9cfdd888"
+  integrity sha512-/ev8r/YT0ReF0+NaEM1x52DgzzuI0Bf45V6lz+eICCdEnJe8Xc04RAd3N9Wgwc7WeTJePDKY5mHP8opHydfFlA==
+  dependencies:
+    "@lion/core" "0.12.0"
+    popper.js "^1.15.0"
+    singleton-manager "1.1.2"
+
+"@lion/validate-messages@^0.2.15":
+  version "0.2.15"
+  resolved "https://registry.yarnpkg.com/@lion/validate-messages/-/validate-messages-0.2.15.tgz#2a779d0ff5a97c272ae6280caf854fd0eb843301"
+  integrity sha512-jhK0YGGMyh5w/55znf9OU+3sLBdWxq5cfRnUI316z2O1TkkuMTg75QZoHDFUk7LBQwiHwKUR//fs1FPSAGxmQA==
+  dependencies:
+    "@lion/core" "0.12.0"
+    "@lion/form-core" "0.6.1"
+    "@lion/localize" "0.14.4"
 
 "@manypkg/find-root@^1.1.0":
   version "1.1.0"
@@ -8082,7 +8144,7 @@ polyfills-loader@^1.7.1:
     terser "^4.6.7"
     whatwg-fetch "^3.0.0"
 
-popper.js@^1.14.4, popper.js@^1.14.7:
+popper.js@^1.14.4, popper.js@^1.14.7, popper.js@^1.15.0:
   version "1.16.1"
   resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
   integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
@@ -9213,6 +9275,11 @@ simplebar@^4.2.3:
     lodash.memoize "^4.1.2"
     lodash.throttle "^4.1.1"
     resize-observer-polyfill "^1.5.1"
+
+singleton-manager@1.1.2, singleton-manager@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/singleton-manager/-/singleton-manager-1.1.2.tgz#35c90b9f86012e4bc3342183a39fae27e8f05f24"
+  integrity sha512-U1nD22iUUVSWY7ST5iB0ca+qFZcXwtP6nf8Gp0WP/u4gqOs83gdOsOS6d4glhvcJ751ERJfDbaMoqDA0pPk+yA==
 
 sinon-chai@^3.3.0:
   version "3.5.0"

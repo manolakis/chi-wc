@@ -103,3 +103,6 @@ export {
   withDropdownConfig,
   withModalDialogConfig,
 } from '@lion/overlays';
+
+// *** web components *****************************************************************************
+export { ChiIcon } from './packages/icon/ChiIcon.js';

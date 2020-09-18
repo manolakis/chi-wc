@@ -100,7 +100,7 @@
     ],
     "*.md": [
       "prettier --write",
-      "markdownlint --ignore '**/CHANGELOG.md' --ignore '__snapshots__/**/*.md",
+      "markdownlint --ignore '{.changeset/*.md,**/CHANGELOG.md}'",
       "git add"
     ]
   },

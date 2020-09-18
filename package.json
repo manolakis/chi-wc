@@ -11,6 +11,8 @@
   "bugs": {
     "url": "https://github.com/manolakis/chi-wc/issues"
   },
+  "main": "index.js",
+  "module": "index.js",
   "scripts": {
     "debug": "web-test-runner \"packages/**/*.test.js\" --watch",
     "dev-server": "web-dev-server",

@@ -1,5 +1,12 @@
 # chi-wc
 
+## 0.4.0
+
+### Minor Changes
+
+- 23bd9f2: Add text input
+- 84ca827: Add solid button
+
 ## 0.3.0
 
 ### Minor Changes

@@ -1,7 +1,7 @@
 import { css } from '@lion/core';
-import { tokenBaseUnit, tokenFontSizeBase } from '../foundations/tokens.js';
+import { tokenBaseUnit, tokenFontFamilyBase } from '../foundations/tokens.js';
 
-export const fontFamilyMixin = ({ fontFamily: _fontFamily = tokenFontSizeBase } = {}) => css`
+export const fontFamilyMixin = ({ fontFamily: _fontFamily = tokenFontFamilyBase } = {}) => css`
   font-family: ${_fontFamily};
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -15,38 +15,38 @@ export const fontMixin = ({ fontSize: _fontSize, lineHeight: _lineHeight } = {})
 // language=CSS
 export const textStyle = css`
   .-text--xl {
-    ${fontMixin(css`1.125rem`, css`1.75rem`)};
+    ${fontMixin({ fontSize: css`1.125rem`, lineHeight: css`1.75rem` })};
   }
   .-text--lg {
-    ${fontMixin(css`1rem`, css`1.5rem`)};
+    ${fontMixin({ fontSize: css`1rem`, lineHeight: css`1.5rem` })};
   }
   .-text--md {
-    ${fontMixin(css`0.875rem`, css`1.5rem`)};
+    ${fontMixin({ fontSize: css`0.875rem`, lineHeight: css`1.5rem` })};
   }
   .-text--sm {
-    ${fontMixin(css`0.8125rem`, css`1.25rem`)};
+    ${fontMixin({ fontSize: css`0.8125rem`, lineHeight: css`1.25rem` })};
   }
   .-text--xs {
-    ${fontMixin(css`0.75rem`, css`1rem`)};
+    ${fontMixin({ fontSize: css`0.75rem`, lineHeight: css`1rem` })};
   }
 
   .-text--h1 {
-    ${fontMixin(css`3rem`, css`4rem`)};
+    ${fontMixin({ fontSize: css`3rem`, lineHeight: css`4rem` })};
   }
   .-text--h2 {
-    ${fontMixin(css`2rem`, css`3rem`)};
+    ${fontMixin({ fontSize: css`2rem`, lineHeight: css`3rem` })};
   }
   .-text--h3 {
-    ${fontMixin(css`1.5rem`, css`2rem`)};
+    ${fontMixin({ fontSize: css`1.5rem`, lineHeight: css`2rem` })};
   }
   .-text--h4 {
-    ${fontMixin(css`1.125rem`, css`2rem`)};
+    ${fontMixin({ fontSize: css`1.125rem`, lineHeight: css`2rem` })};
   }
   .-text--h5 {
-    ${fontMixin(css`1rem`, css`1.5rem`)};
+    ${fontMixin({ fontSize: css`1rem`, lineHeight: css`1.5rem` })};
   }
   .-text--h6 {
-    ${fontMixin(css`0.875rem`, css`1.5rem`)};
+    ${fontMixin({ fontSize: css`0.875rem`, lineHeight: css`1.5rem` })};
   }
 
   .-lh--1 {

@@ -38,6 +38,7 @@ import {
   colorYellow30,
   colorBlue80,
   colorBlue90,
+  colorGrey40,
 } from '../color-system.js';
 
 /** Text */
@@ -54,6 +55,7 @@ export const tokenColorTextSuccess = css`var(--color-text-success, ${colorGreen7
 export const tokenColorTextWarning = css`var(--color-text-warning, ${colorYellow70})`;
 export const tokenColorTextDanger = css`var(--color-text-danger, ${colorRed70})`;
 export const tokenColorTextInfo = css`var(--color-text-info, ${colorBlue75})`;
+export const tokenColorTextMutedLighter = css`var(--color-text-muted-lighter, ${colorGrey50})`;
 export const tokenColorTextMutedLight = css`var(--color-text-muted-light, ${colorGrey60})`;
 export const tokenColorTextMuted = css`var(--color-text-muted, ${colorGrey70})`;
 
@@ -109,6 +111,7 @@ export const tokenColorBackgroundWhite = css`var(--color-background-white, ${col
 export const tokenColorBorderBaseLight = css`var(--color-border-base-light, ${colorGrey20})`;
 export const tokenColorBorderBase = css`var(--color-border-base, ${colorGrey25})`;
 export const tokenColorBorderBaseDark = css`var(--color-border-base-dark, ${colorGrey30})`;
+export const tokenColorBorderBaseDarker = css`var(--color-border-base-darker, ${colorGrey40})`;
 export const tokenColorBorderPrimary = css`var(--color-border-primary, ${colorBlue70})`;
 export const tokenColorBorderSecondary = css`var(--color-border-secondary, ${colorCyan40})`;
 export const tokenColorBorderSecondaryDark = css`var(--color-border-secondary-dark, ${colorCyan50})`;

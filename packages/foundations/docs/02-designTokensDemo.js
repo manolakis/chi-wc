@@ -56,6 +56,7 @@ import {
   tokenColorIconInfo,
   tokenColorIconMuted,
   tokenColorIconMutedDark,
+  tokenColorTextMutedLighter,
   tokenColorIconMutedLight,
   tokenColorIconPrimary,
   tokenColorIconSecondary,
@@ -134,6 +135,7 @@ import {
   tokenColorBackgroundPrimaryDark,
   tokenColorBackgroundPrimaryDarker,
   tokenColorBackgroundPrimaryDarkest,
+  tokenColorBorderBaseDarker,
 } from '../tokens.js';
 
 addGlobalStyles(tableStyle);
@@ -239,6 +241,7 @@ export const renderColorText = () =>
       tokenColorTextWarning,
       tokenColorTextDanger,
       tokenColorTextInfo,
+      tokenColorTextMutedLighter,
       tokenColorTextMutedLight,
       tokenColorTextMuted,
       { token: tokenColorTextWhite, back: tokenColorBackgroundBlack },
@@ -385,6 +388,7 @@ export const renderColorBorder = () =>
       { token: tokenColorBorderBaseLight, back: tokenColorTextBase },
       { token: tokenColorBorderBase, back: tokenColorTextBase },
       { token: tokenColorBorderBaseDark, back: tokenColorTextBase },
+      { token: tokenColorBorderBaseDarker, back: tokenColorTextBase },
       { token: tokenColorBorderPrimary, back: tokenColorTextBase },
       { token: tokenColorBorderSecondary, back: tokenColorTextBase },
       { token: tokenColorBorderSecondaryDark, back: tokenColorTextBase },

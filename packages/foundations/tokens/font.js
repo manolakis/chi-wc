@@ -2,8 +2,8 @@ import { css } from '@lion/core';
 
 /** Font family */
 
-export const tokenFontFamilyBase = css`var(--font-family-base, 'Inter'\, Arial\, Helvetica\, Verdana\, sans-serif)`;
-export const tokenFontFamilyMono = css`var(--font-family-mono, Menlo\, Consolas\, 'Liberation Mono'\, Courier\, monospace)`;
+export const tokenFontFamilyBase = css`var(--font-family-base, 'Inter', Arial, Helvetica, Verdana, sans-serif)`;
+export const tokenFontFamilyMono = css`var(--font-family-mono, Menlo, Consolas, 'Liberation Mono', Courier, monospace)`;
 
 /** Font weight */
 

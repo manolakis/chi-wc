@@ -1494,6 +1494,14 @@
     "@lion/core" "0.12.0"
     singleton-manager "1.1.2"
 
+"@lion/input@^0.9.2":
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/@lion/input/-/input-0.9.2.tgz#f4e2a7ac70802e88cf8a65d0b6834d792f395f01"
+  integrity sha512-1AiyEF1KDrfUHVolKZA2rCgNsJyWetl+O8MToIq/d9mp3TjLRnpEqRvA01cbAZ6JuzVVdfLVzAMuZzsA0kI5LQ==
+  dependencies:
+    "@lion/core" "0.12.0"
+    "@lion/form-core" "0.6.1"
+
 "@lion/localize@0.14.4", "@lion/localize@^0.14.4":
   version "0.14.4"
   resolved "https://registry.yarnpkg.com/@lion/localize/-/localize-0.14.4.tgz#3ecfc0fff82cf373a5a4e37df3f8d88c75bf96f0"

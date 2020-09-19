@@ -105,4 +105,6 @@ export {
 } from '@lion/overlays';
 
 // *** web components *****************************************************************************
+export { ChiButton } from './packages/button/ChiButton.js';
 export { ChiIcon } from './packages/icon/ChiIcon.js';
+export { ChiInput } from './packages/input/ChiInput.js';

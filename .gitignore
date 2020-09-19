@@ -28,3 +28,6 @@ local.log
 
 ## browserstack
 browserstack.err
+
+## storybook
+storybook-static/

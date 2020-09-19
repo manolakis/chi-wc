@@ -1454,6 +1454,13 @@
     "@lion/core" "0.12.0"
     singleton-manager "1.1.2"
 
+"@lion/button@^0.7.13":
+  version "0.7.13"
+  resolved "https://registry.yarnpkg.com/@lion/button/-/button-0.7.13.tgz#cc8d5dc57e552adcb7eb152373533b14f77dbd58"
+  integrity sha512-+VHuo6B695XEKFVClUddRW2nkOQ7/8HnhQuLOkje6o16R150DABpKONUqvaaLr+WIKUn97pczPHKKaa15es0GQ==
+  dependencies:
+    "@lion/core" "0.12.0"
+
 "@lion/core@0.12.0", "@lion/core@^0.12.0":
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/@lion/core/-/core-0.12.0.tgz#b2ceb84fb38470a7c4171324726c8b14bf6ffe0c"

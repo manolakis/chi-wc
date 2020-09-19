@@ -6,7 +6,9 @@ export {
 } from './tokens/border-radius.js';
 export {
   tokenColorTextBase,
+  tokenColorTextBackgroundBase,
   tokenColorTextPrimary,
+  tokenColorTextBackgroundPrimary,
   tokenColorTextPrimaryAlt,
   tokenColorTextSecondary,
   tokenColorTextSecondaryDark,
@@ -35,6 +37,9 @@ export {
   tokenColorBackgroundBaseDarkest,
   tokenColorBackgroundPrimaryLight,
   tokenColorBackgroundPrimary,
+  tokenColorBackgroundPrimaryDark,
+  tokenColorBackgroundPrimaryDarker,
+  tokenColorBackgroundPrimaryDarkest,
   tokenColorBackgroundSecondaryLight,
   tokenColorBackgroundSecondary,
   tokenColorBackgroundSecondaryDark,

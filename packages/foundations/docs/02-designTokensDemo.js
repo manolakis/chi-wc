@@ -7,6 +7,7 @@ import {
   tokenBorderRadiusCircle,
   tokenBorderRadiusSharp,
   tokenColorBackgroundBase,
+  tokenColorTextBackgroundBase,
   tokenColorBackgroundBaseDark,
   tokenColorBackgroundBaseDarker,
   tokenColorBackgroundBaseDarkest,
@@ -129,6 +130,10 @@ import {
   tokenZIndex70,
   tokenZIndex80,
   tokenZIndex90,
+  tokenColorTextBackgroundPrimary,
+  tokenColorBackgroundPrimaryDark,
+  tokenColorBackgroundPrimaryDarker,
+  tokenColorBackgroundPrimaryDarkest,
 } from '../tokens.js';
 
 addGlobalStyles(tableStyle);
@@ -141,14 +146,25 @@ addGlobalStyles(css`
 
 const regexp = /var\((?<name>[\w-]*)(,\s?(?<value>.*))?\)/;
 
+const resolveCSSVariable = (variable, varName) => {
+  const { name, value } = variable.match(regexp).groups;
+
+  if (value.startsWith('var')) {
+    // eslint-disable-next-line no-unused-vars
+    return resolveCSSVariable(value, varName || name);
+  }
+
+  return { name: varName || name, value };
+};
+
 const getColorDefinitions = data =>
   data
     .map(item => (item.cssText ? { token: item } : item))
     .map(({ token, back }) => {
-      const { name, value: color } = token.cssText.match(regexp).groups;
-      const { value: backgroundColor } = (back || tokenColorBackgroundBase).cssText.match(
-        regexp,
-      ).groups;
+      const { name, value: color } = resolveCSSVariable(token.cssText);
+      const { value: backgroundColor } = resolveCSSVariable(
+        (back || tokenColorBackgroundBase).cssText,
+      );
 
       return {
         token,
@@ -213,7 +229,9 @@ export const renderColorText = () =>
     ],
     getColorDefinitions([
       tokenColorTextBase,
+      { token: tokenColorTextBackgroundBase, back: tokenColorBackgroundBase },
       tokenColorTextPrimary,
+      { token: tokenColorTextBackgroundPrimary, back: tokenColorBackgroundPrimary },
       tokenColorTextPrimaryAlt,
       { token: tokenColorTextSecondary, back: tokenColorBackgroundBlack },
       tokenColorTextSecondaryDark,
@@ -310,12 +328,15 @@ export const renderColorBackground = () =>
       },
     ],
     getColorDefinitions([
-      { token: tokenColorBackgroundBase, back: tokenColorTextBase },
-      { token: tokenColorBackgroundBaseDark, back: tokenColorTextBase },
-      { token: tokenColorBackgroundBaseDarker, back: tokenColorTextBase },
-      { token: tokenColorBackgroundBaseDarkest, back: tokenColorTextBase },
-      { token: tokenColorBackgroundPrimaryLight, back: tokenColorTextBase },
-      { token: tokenColorBackgroundPrimary, back: tokenColorTextWhite },
+      { token: tokenColorBackgroundBase, back: tokenColorTextBackgroundBase },
+      { token: tokenColorBackgroundBaseDark, back: tokenColorTextBackgroundBase },
+      { token: tokenColorBackgroundBaseDarker, back: tokenColorTextBackgroundBase },
+      { token: tokenColorBackgroundBaseDarkest, back: tokenColorTextBackgroundBase },
+      { token: tokenColorBackgroundPrimaryLight, back: tokenColorTextBackgroundBase },
+      { token: tokenColorBackgroundPrimary, back: tokenColorTextBackgroundPrimary },
+      { token: tokenColorBackgroundPrimaryDark, back: tokenColorTextBackgroundPrimary },
+      { token: tokenColorBackgroundPrimaryDarker, back: tokenColorTextBackgroundPrimary },
+      { token: tokenColorBackgroundPrimaryDarkest, back: tokenColorTextBackgroundPrimary },
       { token: tokenColorBackgroundSecondaryLight, back: tokenColorTextBase },
       { token: tokenColorBackgroundSecondary, back: tokenColorTextBase },
       { token: tokenColorBackgroundSecondaryDark, back: tokenColorTextBase },
@@ -389,7 +410,7 @@ export const renderFontFamily = () =>
         name: 'Token',
         width: '35%',
         func: token => {
-          const { name } = token.cssText.match(regexp).groups;
+          const { name } = resolveCSSVariable(token.cssText);
 
           return html`<code>${name}</code>`;
         },
@@ -398,7 +419,7 @@ export const renderFontFamily = () =>
         name: 'Value',
         width: '45%',
         func: token => {
-          const { value } = token.cssText.match(regexp).groups;
+          const { value } = resolveCSSVariable(token.cssText);
 
           return value;
         },
@@ -407,7 +428,7 @@ export const renderFontFamily = () =>
         name: 'Example',
         width: '20%',
         func: token => {
-          const { value } = token.cssText.match(regexp).groups;
+          const { value } = resolveCSSVariable(token.cssText);
 
           return html`<span style="font-family:${value}">Aa</span>`;
         },
@@ -423,7 +444,7 @@ export const renderFontWeight = () =>
         name: 'Token',
         width: '35%',
         func: token => {
-          const { name } = token.cssText.match(regexp).groups;
+          const { name } = resolveCSSVariable(token.cssText);
 
           return html`<code>${name}</code>`;
         },
@@ -432,7 +453,7 @@ export const renderFontWeight = () =>
         name: 'Value',
         width: '25%',
         func: token => {
-          const { value } = token.cssText.match(regexp).groups;
+          const { value } = resolveCSSVariable(token.cssText);
 
           return value;
         },
@@ -441,7 +462,7 @@ export const renderFontWeight = () =>
         name: 'Example',
         width: '40%',
         func: token => {
-          const { value } = token.cssText.match(regexp).groups;
+          const { value } = resolveCSSVariable(token.cssText);
 
           return html`<span style="font-weight:${value}">Aa</span>`;
         },
@@ -463,7 +484,7 @@ export const renderFontSizeText = () =>
         name: 'Token',
         width: '35%',
         func: token => {
-          const { name } = token.cssText.match(regexp).groups;
+          const { name } = resolveCSSVariable(token.cssText);
 
           return html`<code>${name}</code>`;
         },
@@ -472,7 +493,7 @@ export const renderFontSizeText = () =>
         name: 'Value',
         width: '25%',
         func: token => {
-          const { value } = token.cssText.match(regexp).groups;
+          const { value } = resolveCSSVariable(token.cssText);
 
           return value;
         },
@@ -481,7 +502,7 @@ export const renderFontSizeText = () =>
         name: 'Example',
         width: '40%',
         func: token => {
-          const { value } = token.cssText.match(regexp).groups;
+          const { value } = resolveCSSVariable(token.cssText);
 
           return html`<span style="font-size:${value}">Aa</span>`;
         },
@@ -505,7 +526,7 @@ export const renderFontSizeHeadings = () =>
         name: 'Token',
         width: '35%',
         func: token => {
-          const { name } = token.cssText.match(regexp).groups;
+          const { name } = resolveCSSVariable(token.cssText);
 
           return html`<code>${name}</code>`;
         },
@@ -514,7 +535,7 @@ export const renderFontSizeHeadings = () =>
         name: 'Value',
         width: '25%',
         func: token => {
-          const { value } = token.cssText.match(regexp).groups;
+          const { value } = resolveCSSVariable(token.cssText);
 
           return value;
         },
@@ -523,7 +544,7 @@ export const renderFontSizeHeadings = () =>
         name: 'Example',
         width: '40%',
         func: token => {
-          const { value } = token.cssText.match(regexp).groups;
+          const { value } = resolveCSSVariable(token.cssText);
 
           return html`<span style="font-size:${value}">Aa</span>`;
         },
@@ -546,7 +567,7 @@ export const renderFontSizeSystem = () =>
         name: 'Token',
         width: '35%',
         func: token => {
-          const { name } = token.cssText.match(regexp).groups;
+          const { name } = resolveCSSVariable(token.cssText);
 
           return html`<code>${name}</code>`;
         },
@@ -555,7 +576,7 @@ export const renderFontSizeSystem = () =>
         name: 'Value',
         width: '25%',
         func: token => {
-          const { value } = token.cssText.match(regexp).groups;
+          const { value } = resolveCSSVariable(token.cssText);
 
           return value;
         },
@@ -564,7 +585,7 @@ export const renderFontSizeSystem = () =>
         name: 'Example',
         width: '40%',
         func: token => {
-          const { value } = token.cssText.match(regexp).groups;
+          const { value } = resolveCSSVariable(token.cssText);
 
           return html`<span style="font-size:${value}">Aa</span>`;
         },
@@ -601,7 +622,7 @@ export const renderBorderRadius = () =>
         name: 'Token',
         width: '35%',
         func: token => {
-          const { name } = token.cssText.match(regexp).groups;
+          const { name } = resolveCSSVariable(token.cssText);
 
           return html`<code>${name}</code>`;
         },
@@ -610,7 +631,7 @@ export const renderBorderRadius = () =>
         name: 'Value',
         width: '25%',
         func: token => {
-          const { value } = token.cssText.match(regexp).groups;
+          const { value } = resolveCSSVariable(token.cssText);
 
           return value;
         },
@@ -619,7 +640,7 @@ export const renderBorderRadius = () =>
         name: 'Example',
         width: '40%',
         func: token => {
-          const { value } = token.cssText.match(regexp).groups;
+          const { value } = resolveCSSVariable(token.cssText);
 
           return html`<div
             style="${styleMap({
@@ -643,7 +664,7 @@ export const renderOpacity = () =>
         name: 'Token',
         width: '35%',
         func: token => {
-          const { name } = token.cssText.match(regexp).groups;
+          const { name } = resolveCSSVariable(token.cssText);
 
           return html`<code>${name}</code>`;
         },
@@ -652,7 +673,7 @@ export const renderOpacity = () =>
         name: 'Value',
         width: '25%',
         func: token => {
-          const { value } = token.cssText.match(regexp).groups;
+          const { value } = resolveCSSVariable(token.cssText);
 
           return value;
         },
@@ -661,7 +682,7 @@ export const renderOpacity = () =>
         name: 'Example',
         width: '40%',
         func: token => {
-          const { value } = token.cssText.match(regexp).groups;
+          const { value } = resolveCSSVariable(token.cssText);
 
           return html`<div
             style="${styleMap({
@@ -700,7 +721,7 @@ export const renderZIndex = () =>
         name: 'Token',
         width: '35%',
         func: token => {
-          const { name } = token.cssText.match(regexp).groups;
+          const { name } = resolveCSSVariable(token.cssText);
 
           return html`<code>${name}</code>`;
         },
@@ -709,7 +730,7 @@ export const renderZIndex = () =>
         name: 'Value',
         width: '65%',
         func: token => {
-          const { value } = token.cssText.match(regexp).groups;
+          const { value } = resolveCSSVariable(token.cssText);
 
           return value;
         },

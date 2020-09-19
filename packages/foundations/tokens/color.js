@@ -36,12 +36,17 @@ import {
   colorYellow10,
   colorYellow20,
   colorYellow30,
+  colorBlue80,
+  colorBlue90,
 } from '../color-system.js';
 
 /** Text */
 
+export const tokenColorTextWhite = css`var(--color-text-white, ${colorWhite})`;
 export const tokenColorTextBase = css`var(--color-text-base, ${colorGrey100})`;
+export const tokenColorTextBackgroundBase = css`var(--color-text-background-base, ${tokenColorTextBase})`;
 export const tokenColorTextPrimary = css`var(--color-text-primary, ${colorBlue75})`;
+export const tokenColorTextBackgroundPrimary = css`var(--color-text-background-primary, ${tokenColorTextWhite})`;
 export const tokenColorTextPrimaryAlt = css`var(--color-text-primary-alt, ${colorBlue70})`;
 export const tokenColorTextSecondary = css`var(--color-text-secondary, ${colorCyan40})`;
 export const tokenColorTextSecondaryDark = css`var(--color-text-secondary-dark, ${colorCyan50})`;
@@ -51,7 +56,6 @@ export const tokenColorTextDanger = css`var(--color-text-danger, ${colorRed70})`
 export const tokenColorTextInfo = css`var(--color-text-info, ${colorBlue75})`;
 export const tokenColorTextMutedLight = css`var(--color-text-muted-light, ${colorGrey60})`;
 export const tokenColorTextMuted = css`var(--color-text-muted, ${colorGrey70})`;
-export const tokenColorTextWhite = css`var(--color-text-white, ${colorWhite})`;
 
 /** Icon */
 
@@ -76,6 +80,9 @@ export const tokenColorBackgroundBaseDarker = css`var(--color-background-base-da
 export const tokenColorBackgroundBaseDarkest = css`var(--color-background-base-darkest, ${colorGrey25})`;
 export const tokenColorBackgroundPrimaryLight = css`var(--color-background-primary-light, ${colorBlue20})`;
 export const tokenColorBackgroundPrimary = css`var(--color-background-primary, ${colorBlue70})`;
+export const tokenColorBackgroundPrimaryDark = css`var(--color-background-primary-darker, ${colorBlue75})`;
+export const tokenColorBackgroundPrimaryDarker = css`var(--color-background-primary-darker, ${colorBlue80})`;
+export const tokenColorBackgroundPrimaryDarkest = css`var(--color-background-primary-darkest, ${colorBlue90})`;
 export const tokenColorBackgroundSecondaryLight = css`var(--color-background-secondary-light, ${colorCyan15})`;
 export const tokenColorBackgroundSecondary = css`var(--color-background-secondary, ${colorCyan40})`;
 export const tokenColorBackgroundSecondaryDark = css`var(--color-background-secondary-dark, ${colorCyan50})`;

@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "@lion/ajax": "^0.5.4",
+    "@lion/button": "^0.7.13",
     "@lion/core": "^0.12.0",
     "@lion/form-core": "^0.6.1",
     "@lion/icon": "^0.7.4",

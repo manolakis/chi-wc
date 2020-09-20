@@ -1,5 +1,11 @@
 # chi-wc
 
+## 0.5.0
+
+### Minor Changes
+
+- cdd59c4: Add header component
+
 ## 0.4.0
 
 ### Minor Changes

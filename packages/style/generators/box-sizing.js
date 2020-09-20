@@ -1,9 +1,14 @@
-import { unsafeCSS } from '@lion/core';
+import { css, unsafeCSS } from '@lion/core';
 
-export const boxSizingGenerator = selector => unsafeCSS`
-  ${selector},
-  ${selector}::before,
-  ${selector}::after {
-    box-sizing: border-box;
-  }
-`;
+export const boxSizingGenerator = (...selectors) => {
+  const styles = selectors
+    .map(
+      selector =>
+        `${unsafeCSS(selector)}, ${unsafeCSS(selector)}::before, ${unsafeCSS(
+          selector,
+        )}::after { box-sizing: border-box; }`,
+    )
+    .join('');
+
+  return css([styles]);
+};

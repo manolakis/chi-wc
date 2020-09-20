@@ -109,3 +109,15 @@ export { ChiButton } from './packages/button/ChiButton.js';
 export { ChiHeader } from './packages/header/ChiHeader.js';
 export { ChiIcon } from './packages/icon/ChiIcon.js';
 export { ChiInput } from './packages/input/ChiInput.js';
+
+// *** styles *************************************************************************************
+export { boxSizingGenerator } from './packages/style/generators/box-sizing.js';
+export {
+  tabletPortraitGenerator,
+  tabletLandscapeGenerator,
+  smallDesktopGenerator,
+  desktopGenerator,
+} from './packages/style/generators/media-queries.js';
+export { rem } from './packages/style/values/spacing.js';
+export { tableStyle } from './packages/style/table.js';
+export { fontFamilyMixin, fontMixin, textStyle } from './packages/style/typography.js';

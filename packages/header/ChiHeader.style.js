@@ -1,7 +1,7 @@
 import { css } from '@lion/core';
 import { boxSizingGenerator } from '../style/generators/box-sizing.js';
 import {
-  desktopSmallGenerator,
+  smallDesktopGenerator,
   tabletPortraitGenerator,
 } from '../style/generators/media-queries.js';
 import { rem } from '../style/values/spacing.js';
@@ -65,7 +65,7 @@ export const headerStyle = css`
     }
   `)}
 
-  ${desktopSmallGenerator(css`
+  ${smallDesktopGenerator(css`
     .header__content {
       padding: 0 ${rem[24]};
       justify-content: initial;

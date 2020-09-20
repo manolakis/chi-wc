@@ -12,7 +12,7 @@ export const tabletLandscapeGenerator = content => css`
   }
 `;
 
-export const desktopSmallGenerator = content => css`
+export const smallDesktopGenerator = content => css`
   @media only screen and (min-width: 992px) {
     ${content}
   }

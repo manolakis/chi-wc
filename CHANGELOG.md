@@ -4,7 +4,7 @@
 
 ### Minor Changes
 
-- 3fff834: export styles
+- 3fff834: Export styles
 
 ## 0.5.0
 
@@ -23,7 +23,7 @@
 
 ### Minor Changes
 
-- 2867f37: add package entrypoints
+- 2867f37: Add package entrypoints
 
 ## 0.2.0
 

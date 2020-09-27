@@ -1,5 +1,11 @@
 # chi-wc
 
+## 0.7.0
+
+### Minor Changes
+
+- b00871e: remove the ajax package
+
 ## 0.6.0
 
 ### Minor Changes

@@ -45,9 +45,6 @@ export {
   UpdateStylesMixin,
 } from '@lion/core';
 
-// *** ajax ******************************************************************************
-export { ajax, setAjax, AjaxClass } from '@lion/ajax';
-
 // *** forms *****************************************************************************
 export {
   Required,

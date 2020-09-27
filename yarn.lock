@@ -987,11 +987,6 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@bundled-es-modules/axios@0.18.1":
-  version "0.18.1"
-  resolved "https://registry.yarnpkg.com/@bundled-es-modules/axios/-/axios-0.18.1.tgz#8beedbc92e9b0ed7df7c6cbdc6dfce84d306d80b"
-  integrity sha512-7c389uGe0dmfdedi9PQ3Om4vKg1HFzm/IntaqZ4FbXOo+gNiiPIM4He8MIkuRpgqUitbm1km0jOQ8p+tSpUp4Q==
-
 "@bundled-es-modules/message-format@6.0.4":
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/@bundled-es-modules/message-format/-/message-format-6.0.4.tgz#232da6877adb960f6c8f598c72588a84352de147"
@@ -1444,15 +1439,6 @@
   integrity sha512-7ulRC1da/rBa6kj6P4g2aJfnET3z8Uf3SWu60cjbtxTA5g8lxRdX/Bd2P92EagGwwAhANeNw8T8if99rJliR6Q==
   dependencies:
     vary "^1.1.2"
-
-"@lion/ajax@^0.5.4":
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/@lion/ajax/-/ajax-0.5.4.tgz#54cb1fb54d2a8283764c7e269d99046e7695e5f5"
-  integrity sha512-MrHqinJrsukbmoqkANQxRD/Tu8Z92Sl6d2hRt7/A6oJC4MemXwpnX6U0fONXrAqmC0z/kwfGAQMdQzXaHIahYA==
-  dependencies:
-    "@bundled-es-modules/axios" "0.18.1"
-    "@lion/core" "0.12.0"
-    singleton-manager "1.1.2"
 
 "@lion/button@^0.7.13":
   version "0.7.13"

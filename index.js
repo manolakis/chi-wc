@@ -89,6 +89,9 @@ export {
   getWeekdayNames,
 } from '@lion/localize';
 
+// *** icons **************************************************************************************
+export { icons, setIcons } from '@lion/icon';
+
 // *** overlays ***********************************************************************************
 export {
   overlays,

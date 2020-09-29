@@ -1,5 +1,11 @@
 # chi-wc
 
+## 0.8.0
+
+### Minor Changes
+
+- 4cb9db8: Add icon system
+
 ## 0.7.0
 
 ### Minor Changes

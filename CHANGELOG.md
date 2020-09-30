@@ -1,5 +1,11 @@
 # chi-wc
 
+## 0.9.0
+
+### Minor Changes
+
+- bd00b31: Add extra info to header
+
 ## 0.8.0
 
 ### Minor Changes

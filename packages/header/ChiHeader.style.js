@@ -30,25 +30,39 @@ export const headerStyle = css`
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     position: relative;
     padding: 0 ${rem[8]};
     height: ${rem[56]};
     width: 100%;
   }
+
+  .header__content > div {
+    flex: 1 1 0px;
+  }
+
+  .header__right {
+    display: flex;
+    justify-content: flex-end;
+  }
+
   .header__brand {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
   }
+
   slot[name='header-brand-logo'] {
     display: block;
     margin: 0 ${rem[8]};
   }
+
   .header__brand__logo {
     height: ${rem[32]};
     width: ${rem[32]};
   }
+
   .header__brand__title {
     display: none;
     color: ${tokenColorTextBase};

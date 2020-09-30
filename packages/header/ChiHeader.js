@@ -24,6 +24,9 @@ export class ChiHeader extends LitElement {
   render() {
     return html`<header class="header">
       <nav class="header__content">
+        <div class="header__left">
+          <slot name="header-left"></slot>
+        </div>
         <div class="header__brand">
           <slot name="header-brand-logo">
             <chi-icon class="header__brand__logo" .svg="${chiLogo}"></chi-icon>
@@ -31,6 +34,9 @@ export class ChiHeader extends LitElement {
           ${this.applicationTitle
             ? html`<span class="header__brand__title">${this.applicationTitle}</span> `
             : nothing}
+        </div>
+        <div class="header__right">
+          <slot name="header-right"></slot>
         </div>
       </nav>
     </header>`;

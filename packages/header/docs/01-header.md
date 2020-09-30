@@ -1,7 +1,7 @@
 # Header
 
 ```js script
-import { renderHeader } from './01-headerDemo.js';
+import { renderHeader, renderHeaderExtra } from './01-headerDemo.js';
 export default {
   title: 'Navigation/Header',
 };
@@ -9,8 +9,14 @@ export default {
 
 Headers are used to render consistent branded headers.
 
-## Example
+## Logo
 
 ```js story
 export const header = () => renderHeader();
+```
+
+## Content extra
+
+```js story
+export const contentExtra = () => renderHeaderExtra();
 ```

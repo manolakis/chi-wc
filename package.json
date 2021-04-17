@@ -18,6 +18,7 @@
     "./core": "./packages/core.js",
     "./form-core": "./packages/form-core.js",
     "./foundations": "./packages/foundations.js",
+    "./header": "./packages/header.js",
     "./helpers": "./packages/helpers.js",
     "./icon": "./packages/icon.js",
     "./input": "./packages/input.js",

@@ -1,5 +1,11 @@
 # chi-wc
 
+## 0.9.1
+
+### Patch Changes
+
+- 56aa511: Add package exports
+
 ## 0.9.0
 
 ### Minor Changes

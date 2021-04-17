@@ -1,5 +1,11 @@
 # chi-wc
 
+## 0.9.2
+
+### Patch Changes
+
+- c5658dd: fix package exports
+
 ## 0.9.1
 
 ### Patch Changes

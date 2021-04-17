@@ -13,6 +13,19 @@
   },
   "main": "index.js",
   "module": "index.js",
+  "exports": {
+    "button": "./packages/button.js",
+    "core": "./packages/core.js",
+    "form-core": "./packages/form-core.js",
+    "foundations": "./packages/foundations.js",
+    "helpers": "./packages/helpers.js",
+    "icon": "./packages/icon.js",
+    "input": "./packages/input.js",
+    "localize": "./packages/localize.js",
+    "overlays": "./packages/overlays.js",
+    "style": "./packages/style.js",
+    "validate-messages": "./packages/validate-messages.js"
+  },
   "scripts": {
     "debug": "web-test-runner \"packages/**/*.test.js\" --watch",
     "dev-server": "web-dev-server",
@@ -66,6 +79,7 @@
     "eslint": "^7.9.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-lit": "^1.3.0",
     "eslint-plugin-wc": "^1.2.0",
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0",

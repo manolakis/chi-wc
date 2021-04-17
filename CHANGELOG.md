@@ -1,5 +1,11 @@
 # chi-wc
 
+## 0.9.3
+
+### Patch Changes
+
+- e26db50: export header
+
 ## 0.9.2
 
 ### Patch Changes

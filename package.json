@@ -14,17 +14,17 @@
   "main": "index.js",
   "module": "index.js",
   "exports": {
-    "button": "./packages/button.js",
-    "core": "./packages/core.js",
-    "form-core": "./packages/form-core.js",
-    "foundations": "./packages/foundations.js",
-    "helpers": "./packages/helpers.js",
-    "icon": "./packages/icon.js",
-    "input": "./packages/input.js",
-    "localize": "./packages/localize.js",
-    "overlays": "./packages/overlays.js",
-    "style": "./packages/style.js",
-    "validate-messages": "./packages/validate-messages.js"
+    "./button": "./packages/button.js",
+    "./core": "./packages/core.js",
+    "./form-core": "./packages/form-core.js",
+    "./foundations": "./packages/foundations.js",
+    "./helpers": "./packages/helpers.js",
+    "./icon": "./packages/icon.js",
+    "./input": "./packages/input.js",
+    "./localize": "./packages/localize.js",
+    "./overlays": "./packages/overlays.js",
+    "./style": "./packages/style.js",
+    "./validate-messages": "./packages/validate-messages.js"
   },
   "scripts": {
     "debug": "web-test-runner \"packages/**/*.test.js\" --watch",
